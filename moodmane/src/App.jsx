@@ -9,22 +9,22 @@ function App() {
   return (
     <>
       <div>
-          <div className="happy">😊</div>
-          <div className="sad">😭</div>
-          <div className="angry">😠</div>
-          <div className="fantastic">🤩</div>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h1>気分記録</h1>
+          <div className="happy">
+            <button>😊</button>
+          </div>
+          <div className="sad">
+            <button>😭</button>
+          </div>
+          <div className="angry">
+            <button>😠</button>
+          </div>
+          <div className="fantastic">
+            <button>🤩</button>
+          </div>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Click on the emotion
       </p>
     </>
   )
