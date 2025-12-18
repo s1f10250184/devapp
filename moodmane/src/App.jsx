@@ -3,35 +3,32 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+  const MOODS = [
+    { key: "happy", label: "😊"},
+    { key: "sad", label: "😭"},
+    { key: "angry", label: "😠"},
+    { key: "fantastic", label: "🤩"},
+  ];
+
 function Recode() {
 
 }
 
 function App() {
-  const [count, setCount] = useState(0)
+  const selectMood = (key) => {
+    console.log("selected:", key);
+  };
 
   return (
-    <>
-      <div>
-        <h1>気分記録</h1>
-          <div className="happy">
-            <button type="button" onClick={() => selectMood("happy")}>😊</button>
-          </div>
-          <div className="sad">
-            <button type="button" onClick={() => selectMood("sad")}>😭</button>
-          </div>
-          <div className="angry">
-            <button type="button" onClicl={() => selectMood("angry")}>😠</button>
-          </div>
-          <div className="fantastic">
-            <button type="button" onClick={() => selectMood("fantastic")}>🤩</button>
-          </div>
-      </div>
-      <p className="read-the-docs">
-        Click on the emotion
-      </p>
-    </>
-  )
+    <div className="moods">
+      {MOODS.map((m) => (
+        <button key={m.key} type="button" onClick={() => selectMood(m.key)}>
+          {m.label}
+        </button>
+      ))}
+    </div>
+  );
 }
+
 
 export default App
