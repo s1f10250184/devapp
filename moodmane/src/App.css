@@ -5,12 +5,31 @@
   text-align: center;
 }
 
+.Head {
+  color: #fd4141;
+  height: 6em;
+  font-size: 30px;
+  margin-top: -7em;
+}
+
+.moods {
+  display:grid;
+  grid-template-columns: repeat(2, 90px);
+  gap: 14px;
+  justify-content: center;
+}
+
+.moodBtn {
+  border: 0;
+  
+}
+
 .happy {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size:  40;
+  font-size:  40px;
 }
 .happy:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -24,7 +43,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size: 40;
+  font-size: 40px;
 }
 .sad:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -38,7 +57,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size: 40;
+  font-size: 40px;
 }
 .angry:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -52,7 +71,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size: 40;
+  font-size: 40px;
 }
 .fantastic:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

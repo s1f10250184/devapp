@@ -14,21 +14,34 @@ function Recode() {
 
 }
 
+const Header = <h2>mood-management</h2>;
+
 function App() {
   const selectMood = (key) => {
     console.log("selected:", key);
   };
 
   return (
-    <div className="moods">
-      {MOODS.map((m) => (
-        <button key={m.key} type="button" onClick={() => selectMood(m.key)}>
-          {m.label}
-        </button>
-      ))}
+    <div> 
+      <div className="Head">
+        {Header}
+      </div>
+      <div className="moods">
+        {MOODS.map((m) => (
+          <button 
+            key={m.key} 
+            type="button" 
+            className="moodBtn"
+            onClick={() => selectMood(m.key)}
+          >
+            {m.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
+
 
 
 export default App
