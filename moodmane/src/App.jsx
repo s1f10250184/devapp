@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,9 +10,12 @@ import './App.css'
     { key: "fantastic", label: "🤩"},
   ];
 
-function Recode() {
-  
+function MyButton() {
+  return (
+    <button>送信</button>
+  );
 }
+
 
 const Header = <h2>mood-management</h2>;
 
@@ -20,6 +23,9 @@ function App() {
   const selectMood = (key) => {
     console.log("selected:", key);
   };
+
+  const [memo, setMemo] = useState("");
+
 
   return (
     <div> 
@@ -38,6 +44,7 @@ function App() {
           </button>
         ))}
       </div>
+      <CommentsField/>
     </div>
   );
 }
@@ -55,11 +62,11 @@ function CommentsField({memo, setMemo}) {
         />
       </div>
       <div>
-        <p>送信</p>
+        button＜
         <MyButton/> 
       </div>
     </div>
-  )
+  );
 }
 
 
