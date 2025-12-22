@@ -11,7 +11,7 @@ import './App.css'
   ];
 
 function Recode() {
-
+  
 }
 
 const Header = <h2>mood-management</h2>;
@@ -40,6 +40,26 @@ function App() {
       </div>
     </div>
   );
+}
+
+function CommentsField({memo, setMemo}) {
+  return (
+    <div>
+      <div>
+        <label>メモ</label>
+        <textarea
+          value = {memo}
+          placeholder="今日の気分はどうだった？"
+          maxLength={200}
+          onChange={(e) => setMemo(e.target.value)}
+        />
+      </div>
+      <div>
+        <p>送信</p>
+        <MyButton/> 
+      </div>
+    </div>
+  )
 }
 
 
