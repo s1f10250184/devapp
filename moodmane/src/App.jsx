@@ -62,7 +62,6 @@ function CommentsField({memo, setMemo}) {
         />
       </div>
       <div>
-        button＜
         <MyButton/> 
       </div>
     </div>
