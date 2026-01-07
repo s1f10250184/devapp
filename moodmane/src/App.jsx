@@ -56,13 +56,23 @@ function CommentsField({memo, setMemo}) {
         <label>メモ</label>
         <textarea
           value = {memo}
-          placeholder="今日の気分はどうだった？"
+          placeholder="一言"
           maxLength={200}
           onChange={(e) => setMemo(e.target.value)}
         />
       </div>
       <div>
         <MyButton/> 
+      </div>
+    </div>
+  );
+}
+
+function Data() {
+  return (
+    <div>
+      <div>
+        
       </div>
     </div>
   );
